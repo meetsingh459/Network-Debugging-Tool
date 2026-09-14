@@ -9,11 +9,11 @@ enum NetworkError: Error {
 
 import Foundation
 
-class NetworkClient {
+class NetworkService {
     
     private let baseURL = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 
-    func fetchData(for word: String) async throws -> [WordEntry] {
+    func fetchData(for word: String) async throws -> [WordEntryModel] {
         guard let url = URL(string: "\(baseURL)\(word)") else {
             throw NetworkError.invalidURL
         }
@@ -26,7 +26,7 @@ class NetworkClient {
         }
         
         do {
-            return try JSONDecoder().decode([WordEntry].self, from: data)
+            return try JSONDecoder().decode([WordEntryModel].self, from: data)
         } catch {
             throw NetworkError.decodingFailed
         }

@@ -11,7 +11,7 @@ import SwiftUI
 struct NetworkDebuggingToolApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DictionaryView()
         }
     }
 }
