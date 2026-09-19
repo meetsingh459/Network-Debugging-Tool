@@ -12,6 +12,9 @@ struct NetworkDebuggingToolApp: App {
     var body: some Scene {
         WindowGroup {
             DictionaryView()
+                .task {
+                    NetworkDebugger.shared.start()
+                }
         }
     }
 }

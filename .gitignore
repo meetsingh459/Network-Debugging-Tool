@@ -1,0 +1,119 @@
+# Xcode
+## User settings
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+## Derived data and build products
+DerivedData/
+build/
+Build/
+
+## Xcode project workspace
+*.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+## SwiftPM
+.swiftpm/
+.build/
+Package.resolved
+
+## CocoaPods
+Pods/
+*.podspec.json
+
+## Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+## Accio dependency manager
+Dependencies/
+.accio/
+
+## Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**
+fastlane/test_output/**
+
+## Archives & symbols
+*.xcarchive
+*.dSYM
+*.dSYM.zip
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+## Swift and Obj-C artifacts
+*.swp
+*.swm
+*.swp*
+*.swm*
+
+## Swift Package artifacts
+Artifacts/
+
+## iOS specific
+*.ipa
+*.app
+*.appex
+*.mobileprovision
+*.provisionprofile
+
+## macOS specific
+*.pkg
+*.dmg
+
+## Debugging
+*.log
+
+## Coverage
+*.xccovreport
+*.xccovarchive
+
+## Temporary files
+*.tmp
+*.temp
+*.DS_Store
+*.orx
+
+## Xcode scheme/userdata
+**/*.xcodeproj/xcuserdata/
+**/*.xcodeproj/project.xcworkspace/xcuserdata/
+**/*.xcworkspace/xcuserdata/
+
+## SwiftLint/formatters caches
+.swiftlint_cache
+.swiftformat
+
+## SPM index/store (Xcode)
+SourcePackages/
+
+## Tuist
+Tuist/Dependencies/
+.graph/
+
+## Firebase / GoogleService
+GoogleService-Info.plist
+GoogleService-Info*.plist
+
+## Secrets / Env
+.env
+.env.*
+Secrets.plist
+Secrets/**
+
+## Metal intermediate files
+*.metallib
+
+## Asset catalogs build artifacts
+*.car
+
+## Preview assets
+*.preview-thumbnails
+
+## VisionOS derived assets
+*.usdz
+
+# End of .gitignore

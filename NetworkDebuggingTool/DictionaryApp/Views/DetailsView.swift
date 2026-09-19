@@ -1,9 +1,3 @@
-//
-//  DetailsView.swift
-//  NetworkDebuggingTool
-//
-//  Created by Manmeet on 15/09/26.
-//
 
 import SwiftUI
 
