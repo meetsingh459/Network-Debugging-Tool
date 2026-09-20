@@ -37,8 +37,6 @@ Built from scratch as a hands-on study of modern iOS: the `URLProtocol` loading 
 
 ## Screenshots
 
-_Add your images to a `Screenshots/` folder and they'll render here._
-
 | Dictionary (host app) | Request log | Call details |
 | --- | --- | --- |
 | ![Dictionary](Screenshots/dictionary.png) | ![Logs](Screenshots/logs.png) | ![Details](Screenshots/details.png) |
