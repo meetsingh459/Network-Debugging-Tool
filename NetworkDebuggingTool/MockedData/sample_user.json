@@ -1,0 +1,98 @@
+[
+  {
+    "word" : "Am I Audible?",
+    "phonetic" : "\/ˈmɑːvl̩\/",
+    "phonetics" : [
+      {
+        "audio" : "",
+        "text" : "\/ˈmɑːvl̩\/"
+      },
+      {
+        "sourceUrl" : "https:\/\/commons.wikimedia.org\/w\/index.php?curid=2454142",
+        "audio" : "https:\/\/api.dictionaryapi.dev\/media\/pronunciations\/en\/marvel-us.mp3",
+        "license" : {
+          "name" : "BY-SA 3.0",
+          "url" : "https:\/\/creativecommons.org\/licenses\/by-sa\/3.0"
+        },
+        "text" : "\/ˈmɑɹvl̩\/"
+      }
+    ],
+    "meanings" : [
+      {
+        "partOfSpeech" : "noun",
+        "synonyms" : [
+
+        ],
+        "definitions" : [
+          {
+            "antonyms" : [
+
+            ],
+            "definition" : "Said thrice to summon the spirit of stable Wi-Fi.",
+            "synonyms" : [
+
+            ]
+          },
+          {
+            "antonyms" : [
+
+            ],
+            "definition" : "Wonder, astonishment.",
+            "synonyms" : [
+
+            ]
+          }
+        ],
+        "antonyms" : [
+
+        ]
+      },
+      {
+        "partOfSpeech" : "verb",
+        "synonyms" : [
+
+        ],
+        "definitions" : [
+          {
+            "antonyms" : [
+
+            ],
+            "definition" : "To become filled with wonderment or admiration; to be amazed at something.",
+            "synonyms" : [
+
+            ]
+          },
+          {
+            "antonyms" : [
+
+            ],
+            "definition" : "To marvel at.",
+            "synonyms" : [
+
+            ]
+          },
+          {
+            "antonyms" : [
+
+            ],
+            "definition" : "(used impersonally) To cause to marvel or be surprised.",
+            "synonyms" : [
+
+            ]
+          }
+        ],
+        "antonyms" : [
+
+        ]
+      }
+    ],
+    "license" : {
+      "name" : "CC BY-SA 3.0",
+      "url" : "https:\/\/creativecommons.org\/licenses\/by-sa\/3.0"
+    },
+    "sourceUrls" : [
+      "https:\/\/en.wiktionary.org\/wiki\/marvel"
+    ]
+  }
+]
+

@@ -60,4 +60,17 @@ final class NetworkDebugger {
         debuggerPanel.modalPresentationStyle = .overFullScreen
         rootViewController.present(debuggerPanel, animated: true)
     }
+    
+    func interceptedConfiguration(_ base: URLSessionConfiguration? = nil) -> URLSessionConfiguration {
+        let newConfiguration = base?.copy() as? URLSessionConfiguration ?? URLSessionConfiguration.ephemeral
+        var protocolClasses = newConfiguration.protocolClasses ?? []
+        
+        if !protocolClasses.contains(where: { $0 == NetworkInterceptor.self }) {
+            protocolClasses.insert(NetworkInterceptor.self, at: 0)
+        }
+        
+        newConfiguration.protocolClasses = protocolClasses
+        return newConfiguration
+    }
+    
 }

@@ -6,11 +6,12 @@ final class MockStore {
     
     static let shared = MockStore()
     
+    nonisolated(unsafe) private(set) static var enabledSnapshot: [Mock] = []
+    
     private(set) var mocks: [Mock] = [
-        Mock(urlPattern: "your-api-endpoint.com/some/path", jsonFileName: "sample_user.json"),
-        Mock(urlPattern: "your-api-endpoint.com/some/path2", jsonFileName: "sample_user.json", isEnabled: true),
-        Mock(urlPattern: "your-api-endpoint.com/some/path", jsonFileName: "sample_user.json"),
-        Mock(urlPattern: "your-api-endpoint.com/some/path2", jsonFileName: "sample_user.json", isEnabled: true),
+        Mock(urlPattern: "https://api.dictionaryapi.dev/api/v2/entries/en/dog", jsonFileName: "sample_user.json"),
+        Mock(urlPattern: "https://api.dictionaryapi.dev/api/v2/entries/en/cat", jsonFileName: "sample_user.json"),
+        Mock(urlPattern: "https://api.dictionaryapi.dev/api/v2/entries/en/human", jsonFileName: "sample_user.json"),
     ]
     
     func addMock(_ mock: Mock) {
@@ -27,5 +28,10 @@ final class MockStore {
         }
         
         mocks[i].isEnabled = isEnabled
+        refreshSnapshot()
+    }
+    
+    private func refreshSnapshot() {
+        Self.enabledSnapshot = mocks.filter{ $0.isEnabled }
     }
 }

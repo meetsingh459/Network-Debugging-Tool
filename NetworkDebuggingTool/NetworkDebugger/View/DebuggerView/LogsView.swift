@@ -2,26 +2,52 @@
 import SwiftUI
 
 struct LogsView: View {
+    
+    @State var viewModel = NetworkCallViewModel()
+    
     var body: some View {
         VStack(spacing: 0) {
-            HStack(alignment: .center, spacing: 0) {
-                ToolbarButton(title: "Clear All") {
-                    
+            HStack {
+                Spacer()
+                Button("Clean All") {
+                    viewModel.clearAllLogs()
                 }
-                ToolbarButton(title: "Refresh") {
-                    
-                }
+                .font(.system(size: 14))
             }
             .padding(.horizontal)
             
-            Divider()
-    
-            Spacer()
-            
-            Text("TODO to implement logs")
-                .foregroundStyle(.secondary)
-            
-            Spacer()
+            if viewModel.isEmpty {
+                Spacer()
+                Text("No network calls yet").foregroundStyle(.secondary)
+                Spacer()
+            } else {
+                List(viewModel.networkCalls) { call in
+                    Button {
+                        viewModel.selectedCell = call
+                    } label: {
+                        HStack {
+                            Text(call.method).font(.caption).bold().frame(width: 42, alignment: .leading)
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(call.path).font(.caption).lineLimit(1)
+                                if let host = call.host {
+                                    Text(host).font(.caption2).foregroundStyle(.secondary)
+                                }
+                            }
+                            Spacer()
+                            Text(viewModel.statusText(call)).font(.caption).bold().foregroundStyle(viewModel.statusColor(call))
+                        }
+                    }
+                    .buttonStyle(.plain)
+                }
+                .listStyle(.plain)
+                .sheet(item: $viewModel.selectedCell) { call in
+                    let logsDetailViewModel = LogsDetailViewViewModel(networkCall: call) {
+                        viewModel.selectedCell = nil
+                    }
+                    
+                    LogsDetailView(viewModel: logsDetailViewModel)
+                }
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
     }

@@ -23,9 +23,7 @@ struct Phonetic: Decodable {
 }
 
 struct Meaning: Decodable, Identifiable {
-    var id: String {
-        return "partOfSpeeh\(UUID().uuidString)"
-    }
+    let id: String = UUID().uuidString
     let partOfSpeech: String
     let definitions: [Definition]
 }
